@@ -1,7 +1,18 @@
-site_name: MkLorum
-site_url: https://cc050511.github.io/note/site
+site_name: Cc的笔记本
+site_url: https://cc050511.github.io/note/
+repo_name: Cc050511/note
+repo_url: https://github.com/Cc050511/note/
+edit_uri: tree/main/docs
+site_description: Cc的笔记本
+copyright: Copyright &copy; 2022-2023 <a href="https://github.com/Cc050511" target="_blank" rel="noopener">Cc050511</a>
+
+theme: 
+  name: 'material'
+
 nav:
-    - Home: index.md
-    - About: about.md
-theme:
-  name: material
+  - Home: index.md
+  - About: about.md
+  - Computer Science:
+    - cpp编译运行: cpp编译运行.md
+    - 爬虫: 爬虫.md
+    - shell: shell.md
