@@ -1,4 +1,4 @@
-site_name: Cc的笔记本
+site_name: Cc
 site_url: https://cc050511.github.io/note/
 repo_name: Cc050511/note
 repo_url: https://github.com/Cc050511/note/
@@ -8,6 +8,7 @@ copyright: Copyright &copy; 2022-2023 <a href="https://github.com/Cc050511" targ
 
 theme: 
   name: 'material'
+  custom_dir: overrides
   palette:
     #primary: blue grey
     - scheme: default # 日间模式
@@ -35,9 +36,52 @@ theme:
     - search.highlight # 搜索出的文章关键词加入高亮
     #- navigation.expand # 打开Tab时左侧目录全部展开
     #- navigation.indexes #启用节索引页后，可以将文档直接附加到节
-    - search.share #搜索分享按钮
+    - search.share #搜索分享按钮\
+    - content.code.copy # 代码块允许复制
   icon: 
     repo: fontawesome/brands/github #右上角图标
+    
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - footnotes
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.highlight:
+      anchor_linenums: true
+      # line_spans: __span
+      # pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - tables
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_javascript:
+  # mathjax
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 
 nav:
   - Home: index.md
@@ -45,4 +89,6 @@ nav:
   - Computer Science:
     - cpp编译运行: cs/cpp编译运行.md
     - 爬虫: cs/爬虫.md
-    - shell: cs/shell.md
+  - Other:
+    - test: test.md
+  - About: about.md
