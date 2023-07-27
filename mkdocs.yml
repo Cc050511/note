@@ -90,5 +90,7 @@ nav:
     - cpp编译运行: cs/cpp编译运行.md
     - 爬虫: cs/爬虫.md
   - Other:
+    - English:
+      - 如何用英语思考中的练习: english/practice.md
     - test: test.md
   - About: about.md
